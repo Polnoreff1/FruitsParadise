@@ -20,7 +20,6 @@
 		779902F029A0BCC1005A2D2E /* FinalViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902E929A0BCC1005A2D2E /* FinalViewModelFactory.swift */; };
 		779902F329A0BD55005A2D2E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902F229A0BD55005A2D2E /* Network.swift */; };
 		779902F629A0BD80005A2D2E /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902F529A0BD80005A2D2E /* Wish.swift */; };
-		779902FA29A0BDBB005A2D2E /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902F929A0BDBB005A2D2E /* UIViewController+extensions.swift */; };
 		779902FC29A0BDCF005A2D2E /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902FB29A0BDCF005A2D2E /* UIView+extensions.swift */; };
 		779902FE29A0BDE6005A2D2E /* UDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902FD29A0BDE6005A2D2E /* UDStorage.swift */; };
 		7799030129A0BE26005A2D2E /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779902FF29A0BE26005A2D2E /* FinalViewController.swift */; };
@@ -49,7 +48,6 @@
 		779902E929A0BCC1005A2D2E /* FinalViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewModelFactory.swift; sourceTree = "<group>"; };
 		779902F229A0BD55005A2D2E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		779902F529A0BD80005A2D2E /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
-		779902F929A0BDBB005A2D2E /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		779902FB29A0BDCF005A2D2E /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		779902FD29A0BDE6005A2D2E /* UDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDStorage.swift; sourceTree = "<group>"; };
 		779902FF29A0BE26005A2D2E /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 		779902F829A0BDA6005A2D2E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				779902F929A0BDBB005A2D2E /* UIViewController+extensions.swift */,
 				779902FB29A0BDCF005A2D2E /* UIView+extensions.swift */,
 				7799031229A13D82005A2D2E /* SKLabelNode+extensions.swift */,
 			);
@@ -304,7 +301,6 @@
 				779902F029A0BCC1005A2D2E /* FinalViewModelFactory.swift in Sources */,
 				779902EF29A0BCC1005A2D2E /* FinalAssembly.swift in Sources */,
 				779902FE29A0BDE6005A2D2E /* UDStorage.swift in Sources */,
-				779902FA29A0BDBB005A2D2E /* UIViewController+extensions.swift in Sources */,
 				779902FC29A0BDCF005A2D2E /* UIView+extensions.swift in Sources */,
 				7799030829A0C82E005A2D2E /* GamePresenter.swift in Sources */,
 				779902ED29A0BCC1005A2D2E /* FinalPresenter.swift in Sources */,
