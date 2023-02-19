@@ -13,7 +13,6 @@ protocol IGamePresenter {
     func saveScore(value: Int, key: String)
     func getValueFor(key: String) -> Int
     var allEmoji: [Character] { get }
-    var viewModel: GameViewModel? { get }
     var timeCount: Int { get set }
     var currentEmojis: [SKNode] { get set }
     var selectedEmojis: [SKNode] { get set }
@@ -40,7 +39,6 @@ final class GamePresenter: IGamePresenter {
     // MARK: - IStartPresenter
     
     var allEmoji: [Character] = ["🍊", "🍋", "🍑", "🥭", "🥑", "🍌", "🍒", "🍓", "🍈", "🍎", "🍏", "🥥", "🍍", "🥝", "🍐", "🍅", "🍇", "🫐", "🌽", "🥕"]
-    var viewModel: GameViewModel?
     var timeCount = 3
     var currentEmojis: [SKNode] = []
     var selectedEmojis: [SKNode] = []

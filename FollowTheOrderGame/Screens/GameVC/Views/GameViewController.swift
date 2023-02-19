@@ -211,8 +211,25 @@ extension GameViewController: SKSceneDelegate {
                 let location = touch.location(in: scene)
                 let node: SKNode = scene.atPoint(location)
                 if node.name != nil {
+                    var lastPickedColor: UIColor = .green
+                    presenter.selectedEmojis.append(node)
+                    
+                    if
+                        presenter.selectedEmojis.count == 1,
+                        presenter.currentEmojis.first != presenter.selectedEmojis.first {
+                        lastPickedColor = .red
+                        resetScene(score: presenter.defaultScore, result: .loss)
+                    } else if presenter.selectedEmojis.count == presenter.currentEmojis.count && presenter.currentEmojis.contains(presenter.selectedEmojis) {
+                        score += 1
+                        resetScene(score: score, result: .win)
+                    } else if !presenter.currentEmojis.contains(presenter.selectedEmojis) {
+                        lastPickedColor = .red
+                        resetScene(score: presenter.defaultScore, result: .loss)
+                    }
+                    
                     if let explosion = SKEmitterNode(fileNamed: "CorrectSpark") {
                         explosion.position = node.position
+                        
                         let explodeAction = SKAction.run {
                             scene.addChild(explosion)
                         }
@@ -220,7 +237,7 @@ extension GameViewController: SKSceneDelegate {
                         let removeExplodeAction = SKAction.run {
                             explosion.removeFromParent()
                         }
-                        let colorizeAction = SKAction.colorize(with: .green, colorBlendFactor: 1, duration: 0.2)
+                        let colorizeAction = SKAction.colorize(with: lastPickedColor, colorBlendFactor: 1, duration: 0.2)
                         
                         let explodeSequence = SKAction.sequence(
                             [
@@ -231,19 +248,6 @@ extension GameViewController: SKSceneDelegate {
                             ]
                         )
                         node.run(explodeSequence)
-                    }
-                    
-                    presenter.selectedEmojis.append(node)
-                    
-                    if
-                        presenter.selectedEmojis.count == 1,
-                        presenter.currentEmojis.first != presenter.selectedEmojis.first {
-                        resetScene(score: presenter.defaultScore, result: .loss)
-                    } else if presenter.selectedEmojis.count == presenter.currentEmojis.count && presenter.currentEmojis.contains(presenter.selectedEmojis) {
-                        score += 1
-                        resetScene(score: score, result: .win)
-                    } else if !presenter.currentEmojis.contains(presenter.selectedEmojis) {
-                        resetScene(score: presenter.defaultScore, result: .loss)
                     }
                 }
             }
