@@ -159,11 +159,13 @@ final class GameViewController: UIViewController {
     }
     
     private func resetScene(score: Int, result: ResultType) {
-        showFinalVC(result: result) {
-            self.presenter.selectedEmojis.removeAll()
-            self.score = score
-            self.setupScene()
-            self.updateScore(score: self.score)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(600)) {
+            self.showFinalVC(result: result) {
+                self.presenter.selectedEmojis.removeAll()
+                self.score = score
+                self.setupScene()
+                self.updateScore(score: self.score)
+            }
         }
     }
     

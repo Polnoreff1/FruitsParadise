@@ -27,7 +27,6 @@
 		7799030229A0BE26005A2D2E /* FinalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7799030029A0BE26005A2D2E /* FinalViewController.xib */; };
 		7799030829A0C82E005A2D2E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799030729A0C82E005A2D2E /* GamePresenter.swift */; };
 		7799030B29A0C898005A2D2E /* GameVcAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799030A29A0C898005A2D2E /* GameVcAssembly.swift */; };
-		7799030D29A0C8C4005A2D2E /* GameViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799030C29A0C8C4005A2D2E /* GameViewModelFactory.swift */; };
 		7799030F29A0C8FF005A2D2E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799030E29A0C8FF005A2D2E /* GameViewModel.swift */; };
 		7799031129A0C93E005A2D2E /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799031029A0C93E005A2D2E /* GameRouter.swift */; };
 		7799031329A13D82005A2D2E /* SKLabelNode+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799031229A13D82005A2D2E /* SKLabelNode+extensions.swift */; };
@@ -57,7 +56,6 @@
 		7799030029A0BE26005A2D2E /* FinalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinalViewController.xib; sourceTree = "<group>"; };
 		7799030729A0C82E005A2D2E /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		7799030A29A0C898005A2D2E /* GameVcAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVcAssembly.swift; sourceTree = "<group>"; };
-		7799030C29A0C8C4005A2D2E /* GameViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelFactory.swift; sourceTree = "<group>"; };
 		7799030E29A0C8FF005A2D2E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		7799031029A0C93E005A2D2E /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 		7799031229A13D82005A2D2E /* SKLabelNode+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKLabelNode+extensions.swift"; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 		7799030929A0C87B005A2D2E /* GameVC */ = {
 			isa = PBXGroup;
 			children = (
-				77A4BD5329A26B3900F7DE14 /* ViewModelFactory */,
 				77A4BD5229A26B2D00F7DE14 /* ViewModels */,
 				77973F0629A2591D00CAF7E4 /* Views */,
 				7799030729A0C82E005A2D2E /* GamePresenter.swift */,
@@ -218,14 +215,6 @@
 				7799030E29A0C8FF005A2D2E /* GameViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		77A4BD5329A26B3900F7DE14 /* ViewModelFactory */ = {
-			isa = PBXGroup;
-			children = (
-				7799030C29A0C8C4005A2D2E /* GameViewModelFactory.swift */,
-			);
-			path = ViewModelFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +308,6 @@
 				779902FC29A0BDCF005A2D2E /* UIView+extensions.swift in Sources */,
 				7799030829A0C82E005A2D2E /* GamePresenter.swift in Sources */,
 				779902ED29A0BCC1005A2D2E /* FinalPresenter.swift in Sources */,
-				7799030D29A0C8C4005A2D2E /* GameViewModelFactory.swift in Sources */,
 				779902EE29A0BCC1005A2D2E /* FinalViewModel.swift in Sources */,
 				7799031129A0C93E005A2D2E /* GameRouter.swift in Sources */,
 				779902C529A0B940005A2D2E /* AppDelegate.swift in Sources */,

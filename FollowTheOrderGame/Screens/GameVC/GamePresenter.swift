@@ -24,18 +24,15 @@ final class GamePresenter: IGamePresenter {
     
     // Dependencies
     weak var view: IGameViewController?
-    private let viewModelFactory: IGameViewModelFactory
     private let router: IGameRouter
     private let udStorage: IUDStorage
     
     // MARK: - Initialization
     
     init(
-        viewModelFactory: IGameViewModelFactory,
         router: IGameRouter,
         udStorage: IUDStorage
     ) {
-        self.viewModelFactory = viewModelFactory
         self.router = router
         self.udStorage = udStorage
     }

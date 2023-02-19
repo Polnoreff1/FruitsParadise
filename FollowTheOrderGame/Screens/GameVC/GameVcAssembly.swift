@@ -15,18 +15,15 @@ protocol IGameVcAssembly {
 final class GameVcAssembly: IGameVcAssembly {
     
     // Dependencies
-    private let viewModelFactory: IGameViewModelFactory
     private let finalAssembly: IFinalAssembly
     private let udStorage: IUDStorage
     
     // MARK: - Initialization
     
     init(
-        viewModelFactory: IGameViewModelFactory = GameViewModelFactory(),
         finalAssembly: IFinalAssembly = FinalAssembly(),
         udStorage: IUDStorage = UDStorage()
     ) {
-        self.viewModelFactory = viewModelFactory
         self.finalAssembly = finalAssembly
         self.udStorage = udStorage
     }
@@ -37,7 +34,6 @@ final class GameVcAssembly: IGameVcAssembly {
         let router: GameRouter = GameRouter(finalAssembly: finalAssembly)
         
         let presenter: GamePresenter = GamePresenter(
-            viewModelFactory: viewModelFactory,
             router: router,
             udStorage: udStorage
         )
